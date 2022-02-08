@@ -2,7 +2,7 @@ URL = 'https://uxai.net/'
 
 function takemeback(path) {
     // Checks tab history exists and referrer value
-    if(history.legth > 1 && document.referrer != "") {
+    if(history.length > 1 && document.referrer != "") {
         history.back()
     } else {
         if(path == 1) {
