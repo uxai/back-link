@@ -1,5 +1,3 @@
-URL = 'https://uxai.net/'
-
 function takemeback(path) {
     // Checks tab history exists and referrer value
     if(history.length > 1 && document.referrer != "") {
@@ -8,10 +6,9 @@ function takemeback(path) {
         if(path == 1) {
             // Grabs the pathname and takes only the top level path
             let top = window.location.pathname.split('/')[1]
-            goto = URL + top
-            window.location.href = goto;
+            window.location.href = window.location + top;
         } else {
-            window.location.href = URL;
+            window.location.href = window.location;
         }
     }
 }
